@@ -18,7 +18,8 @@ body {
   font-size: 18px;
   background-image: url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg);
   background-size: 60px, 60px, 40px, 20px, 20px, 70px, 40px;
-  background-position: 5% 650px, 15% 430px, 90% 190px, 10% 180px, 60% 130px, 90% 510px, 60% 830px;
+  background-position: 5% 650px, 15% 430px, 90% 190px, 10% 180px, 60% 130px,
+ 90% 510px, 60% 830px;
   background-repeat: no-repeat;
   -webkit-transition: background-position 3s ease;
   transition: background-position 3s ease;
@@ -464,8 +465,10 @@ footer .social-media .fa-instagram:hover {
   body {
     overflow-x: hidden;
     background-image: url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg);
-    background-size: 100px, 100px, 80px, 80px, 60px, 60px, 40px, 40px, 20px, 20px, 100px, 40px;
-    background-position: 95% 480px, 10% 600px, 50% 500px, 30% 410px, 80% 600px, 15% 320px, 70% 320px, 85% 250px, 5% 130px, 30% 170px, -3% 320px, 40% 780px;
+    background-size: 100px, 100px, 80px, 80px, 60px, 60px, 40px, 40px, 20px,
+ 20px, 100px, 40px;
+    background-position: 95% 480px, 10% 600px, 50% 500px, 30% 410px, 80% 600px,
+ 15% 320px, 70% 320px, 85% 250px, 5% 130px, 30% 170px, -3% 320px, 40% 780px;
   }
   .section1 .crescent {
     margin: 2%;
