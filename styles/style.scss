@@ -1,0 +1,757 @@
+//principle colors
+$mint-green: #b2ff9e;
+$green-lizard: #affc41;
+$grabbean-green: #1dd3b0;
+$blue-sapphire: #086375;
+$russian-violet: #3c1642;
+$black: #264653;
+
+//darkTheme
+$dark-background: #222831;
+
+//remove default style
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  background-image: url(../assets/airBallonBlue.svg),
+    url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg),
+    url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg),
+    url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg);
+  background-size: 60px, 60px, 40px, 20px, 20px, 70px, 40px;
+  background-position: 5% 650px, 15% 430px, 90% 190px, 10% 180px, 60% 130px,
+    90% 510px, 60% 830px;
+  background-repeat: no-repeat;
+  transition: background-position 3s ease;
+}
+.dark-theme {
+  background-color: $dark-background;
+  .logo {
+    color: #4b5d67;
+  }
+  .slogan {
+    color: #4b5d67;
+  }
+  .section2 {
+    div h3 {
+      color: white;
+    }
+    .half-circle,
+    .half-circle2 {
+      &::before,
+      &::after {
+        background-color: $dark-background;
+      }
+    }
+  }
+  .section3 .quote .text {
+    color: white;
+  }
+  .section3 .quote {
+    &::before,
+    &::after {
+      background-color: $dark-background;
+    }
+  }
+  .section4 .airBallon .white-div {
+    background-color: $dark-background;
+  }
+  .section4 .start-container {
+    background-color: #c3c4c5;
+  }
+}
+.container-fluid {
+  display: none;
+  padding: 0;
+}
+// loader
+.loader {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.5s ease;
+  .airBallon {
+    position: relative;
+    width: 30px;
+    transition: all 0.5s ease;
+    animation: move 2s infinite;
+  }
+  h3 {
+    font-family: "Lobster", cursive;
+    color: $grabbean-green;
+  }
+}
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+//section1
+.section1 {
+  width: 100%;
+  .theme-switcher {
+    float: right;
+    margin-right: 10%;
+    margin-top: 2%;
+    .crescent,
+    .sun {
+      width: 20px;
+      margin: 50%;
+      margin-right: 4%;
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
+    .sun {
+      font-size: 30px;
+      color: black;
+    }
+  }
+}
+.logo {
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Lobster", cursive;
+  font-size: 14vw;
+  margin: 0;
+  span {
+    color: $grabbean-green;
+  }
+}
+.slogan {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3.5vw;
+  margin-top: 0;
+}
+.button-principle {
+  width: fit-content;
+  margin: auto;
+  margin-top: 20px;
+  button {
+    border: none;
+    padding: 10px 50px;
+    background-color: $grabbean-green;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+    cursor: pointer;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $blue-sapphire;
+      position: absolute;
+      opacity: 20%;
+      top: 0;
+      left: 0;
+      transform: translateX(100%);
+      transition: all 0.5s ease;
+    }
+    &:hover {
+      &::after {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+//section2
+.section2 {
+  margin-top: 500px;
+  padding-top: 100px;
+  overflow: hidden;
+  background-image: url(../assets/airBallonBlue.svg),
+    url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg);
+  background-size: 60px, 60px, 100px;
+  background-position: 1250px 50px, 1100px 540px, 1200px 630px;
+  background-repeat: no-repeat;
+  transition: background-position 3s ease;
+  .outer-item {
+    display: none;
+  }
+  div {
+    img {
+      width: 20px;
+    }
+    .description {
+      margin: auto;
+      width: 80%;
+      background-color: $blue-sapphire;
+      border-radius: 10px;
+      border: 5px solid #023641;
+      padding: 10px;
+      margin-bottom: 20px;
+      .inner-item {
+        float: left;
+        margin-top: 15%;
+        margin-bottom: 10px;
+        width: 80px;
+      }
+      .goals-item {
+        margin-bottom: 50px;
+      }
+      .dateAndTime-item {
+        margin-right: 10px;
+        margin-top: 5%;
+      }
+      .progress-item {
+        margin-top: 5%;
+        margin-right: 5px;
+      }
+      p {
+        text-align: start;
+        font-size: 4vw;
+        margin: 0;
+        color: $grabbean-green;
+      }
+    }
+  }
+  .journey {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    top: -15px;
+    img {
+      margin: auto;
+      width: 150px;
+    }
+    h3 {
+      color: $black;
+      font-size: 15px;
+      margin-top: 10px;
+      font-weight: 600;
+      display: none;
+    }
+    &:hover {
+      h3 {
+        color: #1dd3b0;
+      }
+    }
+  }
+  .goals {
+    @extend .journey;
+  }
+
+  .dateAndTime {
+    @extend .journey;
+  }
+
+  .progress {
+    @extend .journey;
+    height: fit-content;
+    background-color: transparent;
+    overflow: visible;
+    line-height: normal;
+  }
+}
+
+//section3
+.section3 {
+  background-image: url(../assets/airBallonBlue.svg),
+    url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg),
+    url(../assets/airBallonBlue.svg);
+  background-repeat: no-repeat;
+  background-size: 20px, 40px, 100px, 70px;
+  background-position: 20% 150px, 60% 100px, 90% 600px, 5% 610px;
+  padding: 400px 0;
+  padding-top: 200px;
+  transition: background-position 3s ease;
+  .quote {
+    width: 90%;
+    margin: auto;
+    font-family: "Lobster", cursive;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    border-left: 5px solid #415a64;
+    border-right: 5px solid #415a64;
+    .text {
+      font-size: 6vw;
+      color: $black;
+      display: none;
+    }
+    .author {
+      font-size: 4vw;
+      color: #415a64;
+      display: none;
+    }
+  }
+}
+
+//section4
+.section4 {
+  overflow-y: hidden;
+  .airBallon {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    top: 330px;
+    z-index: -2;
+    transition: all 4s linear, 4s;
+    img {
+      width: 200px;
+    }
+    .white-div {
+      width: 100%;
+      height: 70px;
+      background-color: white;
+      position: relative;
+      z-index: 2;
+      top: -70px;
+    }
+    p {
+      position: absolute;
+      font-size: 50px;
+      font-family: "Lobster", cursive;
+      top: 50px;
+      left: 60px;
+      color: $grabbean-green;
+    }
+    .ready {
+      left: 40px;
+    }
+  }
+  .start-container {
+    width: fit-content;
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 5px rgba($color: #000000, $alpha: 0.1);
+    position: relative;
+    top: 180px;
+    z-index: 1;
+    transition: all 4s linear, 4s;
+    .logo {
+      padding-top: 0;
+    }
+  }
+}
+
+//footer
+footer {
+  width: 100%;
+  height: fit-content;
+  background-color: $black;
+  position: relative;
+  z-index: 3;
+  .row {
+    height: 100%;
+    margin: 0;
+  }
+  .logo {
+    padding: 0;
+    text-align: center;
+    font-size: 3vw;
+    padding-top: 10px;
+  }
+  h3 {
+    color: white;
+    font-size: 3vw;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 20px;
+    i {
+      color: $grabbean-green;
+    }
+  }
+  .social-media {
+    text-align: center;
+    .fab {
+      font-size: 3vw;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .fa-twitter:hover {
+      color: #1da1f2;
+    }
+    .fa-github:hover {
+      color: black;
+    }
+    .fa-instagram:hover {
+      color: #c13584;
+    }
+  }
+}
+
+@media screen and(min-width: 700px) {
+  body {
+    overflow-x: hidden;
+    background-image: url(../assets/airBallonBlue.svg),
+      url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg),
+      url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg),
+      url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg),
+      url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg),
+      url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg),
+      url(../assets/airBallonBlue.svg);
+    background-size: 100px, 100px, 80px, 80px, 60px, 60px, 40px, 40px, 20px,
+      20px, 100px, 40px;
+    background-position: 95% 480px, 10% 600px, 50% 500px, 30% 410px, 80% 600px,
+      15% 320px, 70% 320px, 85% 250px, 5% 130px, 30% 170px, -3% 320px, 40% 780px;
+  }
+
+  //section1
+  .section1 {
+    .theme-switcher {
+      margin-right: 5%;
+    }
+    .crescent {
+      margin: 2%;
+    }
+  }
+  .logo {
+    font-size: 70px;
+  }
+  .slogan {
+    font-size: 16px;
+  }
+
+  //section2
+  .section2 {
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 800px;
+    overflow: hidden;
+    background-image: url(../assets/airBallonBlue.svg),
+      url(../assets/airBallonBlue.svg), url(../assets/airBallonBlue.svg);
+    background-size: 60px, 60px, 100px;
+    background-position: 800px 0px, 900px 490px, 700px 600px;
+    .outer-item {
+      display: block;
+    }
+    div {
+      .description {
+        position: absolute;
+        width: 300px;
+        z-index: 20;
+        opacity: 0;
+        transition: opacity 0.5s linear;
+        .inner-item {
+          display: none;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+    .journey {
+      .outer-item {
+        display: inline-block;
+        margin: auto;
+        width: 150px;
+      }
+      h3 {
+        display: block;
+      }
+      .journey-tooltip {
+        top: 200px;
+        left: -60px;
+      }
+      &:hover {
+        h3 {
+          color: #1dd3b0;
+        }
+        .journey-tooltip {
+          opacity: 1;
+        }
+      }
+    }
+    .line {
+      width: 150px;
+      height: 20px;
+      background-color: $russian-violet;
+      position: relative;
+      top: -120px;
+      left: 150px;
+      box-shadow: -50px 275px 0px 0px $russian-violet,
+        -50px 555px 0px 0px $russian-violet;
+      transition: all 0.5s ease;
+      display: block;
+      &::before,
+      &::after {
+        content: "";
+        width: 100%;
+        height: 20px;
+        background-color: $russian-violet;
+        position: absolute;
+        top: 0;
+        left: 105%;
+        transition: background-color 0.5s ease;
+        display: none;
+      }
+      &::after {
+        top: 200px;
+        left: 0;
+        top: 280px;
+        left: 155%;
+        transition: background-color 0.5s ease;
+      }
+    }
+    .active::before {
+      background-color: $green-lizard;
+    }
+    .active2::after {
+      background-color: $green-lizard;
+    }
+    .goals {
+      top: -225px;
+      left: 300px;
+      .goals-tooltip {
+        top: 200px;
+        left: -80px;
+      }
+      &:hover {
+        .goals-tooltip {
+          opacity: 1;
+        }
+      }
+    }
+    .half-circle,
+    .half-circle2 {
+      display: block;
+      width: 300px;
+      height: 300px;
+      background-color: $russian-violet;
+      border-radius: 50%;
+      position: relative;
+      top: -327px;
+      left: 310px;
+      z-index: -1;
+      transition: background-color 0.5s ease;
+      &::before {
+        content: "";
+        width: 260px;
+        height: 260px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 22px;
+        left: 20px;
+      }
+      &::after {
+        content: "";
+        width: 150px;
+        height: 300px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .dateAndTime {
+      top: -440px;
+      left: 280px;
+      .dateAndTime-tooltip {
+        top: 150px;
+        left: -310px;
+      }
+      &:hover {
+        .dateAndTime-tooltip {
+          opacity: 1;
+        }
+      }
+    }
+    .half-circle2 {
+      top: -537px;
+      left: -70px;
+      display: block;
+      &::after {
+        left: 50%;
+      }
+    }
+    .progress {
+      top: -660px;
+      left: 270px;
+      height: fit-content;
+      background-color: transparent;
+      overflow: visible;
+      line-height: normal;
+      .progress-tooltip {
+        top: 50px;
+        left: 200px;
+      }
+      &:hover {
+        .progress-tooltip {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  //section3
+  .section3 {
+    padding: 300px 0;
+    .quote {
+      width: fit-content;
+      border-right: 5px solid #415a64;
+      border-right: 5px solid #415a64;
+      position: relative;
+      display: none;
+      &::before,
+      &::after {
+        content: "";
+        width: 700px;
+        height: 7px;
+        position: absolute;
+        background-color: white;
+        left: -1px;
+        top: -6px;
+        display: none;
+      }
+      &::after {
+        background-color: white;
+        top: 100%;
+        left: 21.4%;
+      }
+      .text {
+        font-size: 3vw;
+        display: block;
+      }
+      .author {
+        font-size: 16px;
+        display: block;
+      }
+    }
+  }
+
+  //section4
+  .section4 {
+    .airBallon {
+      top: 420px;
+      img {
+        width: 300px;
+      }
+      p {
+        font-size: 70px;
+        top: 100px;
+        left: 100px;
+      }
+      .ready {
+        left: 60px;
+      }
+    }
+    .start-container {
+      padding: 50px;
+      top: 270px;
+    }
+  }
+
+  //footer
+  footer {
+    padding: 20px 0;
+    .col-lg-4 {
+      width: fit-content;
+    }
+    .logo {
+      text-align: start;
+      font-size: 2vw;
+      padding-left: 50px;
+    }
+    h3 {
+      font-size: 1.5vw;
+      padding-top: 30px;
+    }
+    .social-media {
+      .fab {
+        font-size: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1090px) {
+  .section2 {
+    background-position: 1250px 50px, 1100px 540px, 1200px 630px;
+    .goals {
+      left: 79%;
+    }
+    .dateAndTime,
+    .progress {
+      left: 43%;
+    }
+    .line {
+      width: 30%;
+    }
+    .line::before,
+    .line::after {
+      display: block;
+    }
+    .half-circle {
+      left: 78%;
+    }
+  }
+  .section3 .quote {
+    border: 5px solid #415a64;
+    &::before,
+    &::after {
+      display: block;
+    }
+    .text {
+      font-size: 40px;
+    }
+  }
+  footer {
+    .logo {
+      font-size: 40px;
+    }
+    h3 {
+      font-size: 18px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and(min-width: 1210px) {
+  .section2 {
+    .line {
+      width: 300px;
+      &::before {
+        left: 320px;
+      }
+      &::after {
+        left: 460px;
+      }
+    }
+    .dateAndTime {
+      left: 430px;
+    }
+    .goals {
+      left: 780px;
+    }
+    .progress {
+      left: 430px;
+    }
+    .half-circle {
+      left: 790px;
+    }
+  }
+}
